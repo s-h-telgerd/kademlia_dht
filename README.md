@@ -21,7 +21,7 @@ else last member of domain is 1:
 - Available flags
 1. [ trust ] , flag of trusted conracts
 2. [ necessary ] , flag of necessary conracts
-3. [ ] , flag of normal conracts
+- Flag list [ ] represents normal conracts
 
 # Build
 1. Build-in release - visit ' Deploy and run '
