@@ -5,9 +5,10 @@ It is a
 ### A Peer-to-peer Information System based on the XOR Metric.
 
 Kademlia is a distributed hash table for decentralized peer-to-peer computer networks designed by Petar Maymounkov and David Mazières in 2002. It specifies the structure of the network and the exchange of information through node lookups. Kademlia nodes communicate among themselves using UDP. A virtual or overlay network is formed by the participant nodes. 
-![alt text](https://github.com/s-h-telgerd/kademlia_dht/blob/main/doc/Dht.png)
 Each node is identified by a number or node ID. The node ID serves not only as identification, but the Kademlia algorithm uses the node ID to locate values (usually file hashes or keywords). In fact, the node ID provides a direct map to file hashes and that node stores information on where to obtain the file or resource.
 [more information][ref1]
+
+- ![alt text][ref2]
 
 # Protocol Optimisation
 ### K Index
@@ -138,3 +139,5 @@ help
 ```
 
 [ref1]: <https://github.com/s-h-telgerd/kademlia_dht/blob/main/doc/maymounkov-kademlia-lncs.pdf>
+
+[ref2]: <https://github.com/s-h-telgerd/kademlia_dht/blob/main/doc/Dht.png>
