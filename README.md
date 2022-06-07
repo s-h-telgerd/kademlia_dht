@@ -29,7 +29,9 @@ else last member of domain is 1:
 2. Build manually
 - to build manually ' rebar3 ' is required
 ```sh
-    cd directory/to/kademlia_dht/
+    mkdir kademlia_dht
+    git clone https://github.com/s-h-telgerd/kademlia_dht.git
+    cd kademlia_dht
     rebar3 as prod tar
 ```
 
