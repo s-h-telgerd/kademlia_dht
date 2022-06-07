@@ -27,7 +27,7 @@ else last member of domain is 1:
 - Flag list [ ] represents normal conracts
 
 # Build
-1. Build-in release - visit ' Deploy and run '
+1. Build-in release - visit ' Install and run '
 
 2. Build manually
 - to build manually ' rebar3 ' is required
@@ -38,7 +38,7 @@ else last member of domain is 1:
     rebar3 as prod tar
 ```
 
-# Deploy and run
+# Install and run
 
 - To deploy kademlia_dht release
 ```sh
