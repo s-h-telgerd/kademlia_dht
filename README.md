@@ -9,7 +9,7 @@ Kademlia is a distributed hash table for decentralized peer-to-peer computer net
 
 # Protocol Optimisation
 ### K Index
-- To cover more nodes on a bucket with logical distance 1, k_index leverages with Exponential growth rate, k_rate based on domain lenght.
+- To cover more nodes on a bucket with logical distance 1, k_rate, Exponential growth rate, leverages the k_index based on domain lenght.
 ```sh
 if domain is root=[], k_index is the result
 else if last member of domain is 0, k_index is the result
