@@ -14,7 +14,7 @@ Kademlia is a distributed hash table for decentralized peer-to-peer computer net
 if domain is root=[], k_index is the result
 else if last member of domain is 0, k_index is the result
 else last member of domain is 1:
-     k_index * (k_rate - length(Domain) +1) is the result
+    K_index * ( ( K_rate - length(Domain) +1 ) / K_rate )
 ```
 
 # Build

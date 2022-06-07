@@ -70,7 +70,7 @@ report()->
 %%          default: k_rate=2
 %%      if domain is root=[], k_index is the result
 %%      else if last member of domain is 0, k_index is the result
-%%      else, last member of domain is 1, k_index * (k_rate - length(Domain) +1) is the result
+%%      else, last member of domain is 1, K_index * ( ( K_rate - length(Domain) +1 ) / K_rate ) is the result
 %%
 k_indexer(_Domain=[])->
         [{system, dht, DHT}] = mnesia:read(system, dht),
