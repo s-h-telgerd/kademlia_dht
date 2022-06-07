@@ -1,0 +1,24 @@
+{application, kademlia_dht,
+ [{description, "Kademlia Distributed Hash Table"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {mod, {kademlia_dht, []}},
+  {applications,
+   [kernel,
+    stdlib,
+    mnesia
+   ]},
+  {env,[]},
+  {modules, [
+        db_lib
+        ,distributed_hash_table
+        ,kademlia_dht_assist
+        ,simulation
+        ,storage
+        ,transformation
+        ,xor_metric
+  ]},
+
+  {licenses, ["Apache-2.0"]},
+  {links, []}
+ ]}.

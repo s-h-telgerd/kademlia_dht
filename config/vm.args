@@ -1,0 +1,17 @@
+-sname kademlia_dht
+
+-setcookie kademlia_dht_cookie
+
+-connect_all false
+
+-dist_listen false
+-hidden
+-dist_auto_connect never
+
+%-noshell 
+
+-proto_dist inet_tls
+-ssl_dist_optfile ./etc/ssl/inet_tls.conf
+
++K true
++A30
