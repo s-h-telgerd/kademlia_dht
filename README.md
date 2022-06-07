@@ -1,11 +1,2 @@
-
-
-kademlia_dht
-=====
-
-An OTP application
-
-Build
------
-
-    $ rebar3 compile
+# Kademlia
+### A Peer-to-peer Information System based on the EXOR Metric
