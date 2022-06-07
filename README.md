@@ -43,8 +43,11 @@ else last member of domain is 1:
     cd releases
     mkdir kademlia_dht-0.1.0
     tar -zxvf kademlia_dht-0.1.0.tar.gz  -C ./kademlia_dht-0.1.0
+```
+- To run kademlia_dht release
+```sh
     cd kademlia_dht-0.1.0
-    /bin/kademlia_dht console
+    ./bin/kademlia_dht console
 ```
 
 # Simulation
