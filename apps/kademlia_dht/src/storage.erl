@@ -204,7 +204,8 @@ report(_Domain=[])->
     [{domain, _, Status}]=mnesia:read(domain, []),
     io:format("~p    Status: ~p~n", [[], Status]),
     case Status of
-        bucket->ok;
+        bucket->
+            report_summerize();
         split->
             report([0]),report([1]),
             Keys = mnesia:all_keys(in_domain),
