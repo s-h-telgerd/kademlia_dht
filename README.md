@@ -23,10 +23,12 @@ else last member of domain is 1
 ```
 ### Flags
 - To provide stable services for specific contacts
-- Available flags:
-1. [ trust ] , flag of trusted conracts
-2. [ necessary ] , flag of necessary conracts
+```sh
+Available flags:
+    1. [ trust ] , flag of trusted conracts
+    2. [ necessary ] , flag of necessary conracts
 - Flag list [ ] represents normal conracts
+```
 
 # Build
 1. Build-in release - visit ' Install and run '
