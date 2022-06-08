@@ -127,19 +127,20 @@ table_set_up(system)->
                                 [{attributes, record_info(fields, system)},
                                  {type, set},{disc_copies, [node()]}]),
             %% node id has to be 32 Octets
+            Node_id = crypto:strong_rand_bytes(32),
+            io:format("Node_id: ~p", [Node_id]),
             Node =
                 #system{key = node,
-                        val = [
-                            {id ,crypto:strong_rand_bytes(32)}
-                        ]},
+                        val = [{id ,Node_id}]},
             DHT =
                 #system{key = dht,
                         val = [{k_index ,4}, {k_rate ,2}]},                     
             TX = fun() ->
                     mnesia:write(Node),
-                    mnesia:write(DHT)
+                    mnesia:write(DHT),
+                    ok
                 end,
-            mnesia:transaction(TX),
+            {atomic, ok} = mnesia:sync_transaction(TX),
             yes=mnesia:force_load_table(system),
             ok
     end;
@@ -152,7 +153,11 @@ table_set_up(domain)->
                             [{attributes, record_info(fields, domain)},
                                 {type, set}, {disc_copies, [node()]}]),
             Domain_main = #domain{index = [], status = bucket},
-            mnesia:transaction(fun() -> mnesia:write(Domain_main) end),
+            TX = fun() ->
+                    mnesia:write(Domain_main),
+                    ok
+                end,
+            {atomic, ok} = mnesia:sync_transaction(TX),
             yes=mnesia:force_load_table(domain),
             ok
     end;

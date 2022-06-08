@@ -81,7 +81,7 @@ rand_contact(_Iter=0,
     Time_stamp = Time_stamp1 - Time_stamp0,
 
     io:format("~p", ["##########"]),
-    io:format(" Simulation "),
+    io:format(" Insertion Simulation "),
     io:format("~p~n", ["##########"]),
     io:format("Inserted new contacts:           ~p~n", [Inserted]),
     io:format("New contacts have eliminated:    ~p~n", [Eliminated_new]),
@@ -90,8 +90,7 @@ rand_contact(_Iter=0,
     io:format("Computation duration(milisec):   ~p~n", [Time_stamp]),
     io:format("~p", ["##########"]),
     io:format(" End Of Simulation "),
-    io:format(" ~p~n", ["##########"]),
-    report();
+    io:format(" ~p~n", ["##########"]);
 rand_contact(Iter, 
         _STATE=[Inserted,Eliminated_new,Eliminated_old, ERR]) ->
     Status = rand:uniform(6)-1,%% to cover status range 0-5
@@ -157,7 +156,6 @@ transform(K_index, K_rate)->
     io:format("Computation duration(milisec):   ~p~n", [Time_stamp]),
     io:format("~p", ["##########"]),
     io:format(" End Of Transformation "),
-    io:format("~p~n", ["##########"]),
-    report().
+    io:format("~p~n", ["##########"]).
 
 %%lists:foreach(fun(Key)->compile:file(Key) end, [simulation,transformation,storage,domain_hash_table,xor_metric]).

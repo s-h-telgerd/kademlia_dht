@@ -66,10 +66,10 @@ Send your RPC to assist via send operator ' ! '.
     assist ! RPC.
 ```
 ### Available RPCs:
-- RPC = { simulation, Counter }
+- RPC = { insertion, Counter }
 ```sh
-assist ! {simulation,1000}.
-########## Simulation ##########
+assist ! {insertion,1000}.
+########## Insertion Simulation ##########
 Inserted new contacts:           62
 New contacts have eliminated:    3
 New contacts are eliminated:     935
