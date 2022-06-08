@@ -140,4 +140,4 @@ help
 
 [ref1]: <https://github.com/s-h-telgerd/kademlia_dht/blob/main/doc/maymounkov-kademlia-lncs.pdf>
 
-[ref2]: <https://github.com/s-h-telgerd/kademlia_dht/blob/main/doc/Dht.png>
+[ref2]: <https://github.com/s-h-telgerd/kademlia_dht/blob/main/doc/An-example-of-a-Kademlia-topology.png>
