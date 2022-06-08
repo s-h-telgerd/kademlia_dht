@@ -60,8 +60,8 @@ Available flags:
 ```
 
 # Simulation
-It is a DHT labratory to insertion simulation of many fake contacts. Transformation RPC rebilds the DHT structure by changing the k_index and k_rate.
-Send assist your RPC via send operator ' ! '.
+It is a DHT laboratory to insertion simulation of many fake contacts. Transformation RPC rebilds the DHT structure by changing the k_index and k_rate.
+Send your RPC to assist via send operator ' ! '.
 ```sh
     assist ! RPC.
 ```
