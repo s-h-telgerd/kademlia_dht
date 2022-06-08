@@ -8,7 +8,7 @@ Kademlia is a distributed hash table for decentralized peer-to-peer computer net
 Each node is identified by a number or node ID. The node ID serves not only as identification, but the Kademlia algorithm uses the node ID to locate values (usually file hashes or keywords). In fact, the node ID provides a direct map to file hashes and that node stores information on where to obtain the file or resource.
 [more information][ref1]
 
-- ![alt text][ref2]
+![alt text][ref2]
 
 # Protocol Optimisation
 ### K Index
@@ -21,7 +21,7 @@ else last member of domain is 1:
 ```
 ### Flags
 - To provide stable services for specific contacts
-- Available flags
+- Available flags:
 1. [ trust ] , flag of trusted conracts
 2. [ necessary ] , flag of necessary conracts
 - Flag list [ ] represents normal conracts
