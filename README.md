@@ -34,7 +34,8 @@ Available flags:
 1. Build-in release - visit ' Install and run '
 
 2. Build manually
-- to build manually ' rebar3 ' is required
+- to build manually [Erlang/OTP24][ref3] is required
+- to build manually [rebar3][ref4] is required
 ```sh
     mkdir kademlia_dht
     git clone https://github.com/s-h-telgerd/kademlia_dht.git
@@ -151,3 +152,6 @@ help
 [ref1]: <https://github.com/s-h-telgerd/kademlia_dht/blob/main/doc/maymounkov-kademlia-lncs.pdf>
 
 [ref2]: <https://github.com/s-h-telgerd/kademlia_dht/blob/main/doc/An-example-of-a-Kademlia-topology.png>
+
+[ref3]: <https://www.erlang.org/downloads/24>
+[ref4]: <http://rebar3.org/docs/>
