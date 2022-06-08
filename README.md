@@ -44,7 +44,7 @@ Available flags:
 
 # Install and run
 
-- To deploy kademlia_dht release
+- To extract kademlia_dht release
 ```sh
     mkdir kademlia_dht
     git clone https://github.com/s-h-telgerd/kademlia_dht.git
@@ -60,6 +60,12 @@ Available flags:
 ```
 
 # Simulation
+It is a DHT labratory to insertion simulation of many fake contacts. Transformation RPC rebilds the DHT structure by changing the k_index and k_rate.
+Send assist your RPC via send operator ' ! '.
+```sh
+    assist ! RPC.
+```
+### Available RPCs:
 - RPC = { simulation, Counter }
 ```sh
 assist ! {simulation,1000}.
