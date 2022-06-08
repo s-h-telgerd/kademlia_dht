@@ -1,5 +1,5 @@
 # Overview
-It is a
+It is a 
 
 # Kademlia DHT
 ### A Peer-to-peer Information System based on the XOR Metric.
@@ -14,10 +14,12 @@ Each node is identified by a number or node ID. The node ID serves not only as i
 ### K Index
 - To cover more nodes on a bucket with logical distance 1, k_rate, Exponential growth rate, leverages the k_index based on domain lenght.
 ```sh
-if domain is root=[], k_index is the result
-else if last member of domain is 0, k_index is the result
-else last member of domain is 1:
-    K_index * ( ( K_rate - length(Domain) +1 ) / K_rate )
+if domain is root=[] return k_index
+else if last member of domain is 0 return k_index
+else last member of domain is 1
+    if length(Domain) < k_rate
+        return k_index * ( ( k_rate - length(Domain) +1 ) / k_rate )
+    else return k_index
 ```
 ### Flags
 - To provide stable services for specific contacts
