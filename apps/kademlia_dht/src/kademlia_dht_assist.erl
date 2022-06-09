@@ -69,8 +69,8 @@ handle_cast(_RPC, STATE) ->
 %%
 %% handle_info(RPC, STATE) -> Result
 %%  RPC =
-%%      {insertion, Counter}
-%%      {transformation, K_index, K_rate}
+%%      {insert, Counter}
+%%      {transform, K_index, K_rate}
 %%      dht_report
 %%      help
 %%  Result =
@@ -78,11 +78,11 @@ handle_cast(_RPC, STATE) ->
 %% INFO:
 %%      validate the RPC and call corresponding procedures
 %%
-handle_info({insertion, Counter}, STATE)
+handle_info({insert, Counter}, STATE)
    when is_number(Counter)->
     contacts(Counter),%% simulation:contacts(Counter)
     {noreply, STATE};
-handle_info({transformation, K_index, K_rate}, STATE)
+handle_info({transform, K_index, K_rate}, STATE)
   when is_number(K_index)
    andalso is_number(K_rate)->
         %% simulation:transformation(K_index, K_rate)
@@ -137,8 +137,8 @@ info() ->
     io:format("Send RPC to assist genserver~n"),
     io:format("     assist ! RPC ~n"),
     io:format("Available RPCs : ~n"),
-    io:format("{insertion, Counter} ~n"),
-    io:format("{transformation, K_index, K_rate} ~n"),
+    io:format("{insert, Counter} ~n"),
+    io:format("{transform, K_index, K_rate} ~n"),
     io:format("dht_report ~n"),
     io:format("help ~n"),
     io:format("##################################~n"),

@@ -61,16 +61,18 @@ Available flags:
 ```
 
 # Simulation
-It is a DHT laboratory to insertion simulation of many fake contacts. Transformation RPC rebilds the DHT structure by changing the k_index and k_rate.
+It is a DHT laboratory to simulate functionality and scalability of Kademlia DHT.
+- Insertion simulation creates new fake contacts and try to insert them into DHT.
+- Transformation simulation rebilds the DHT structure by changing the k_index and k_rate.
 Send your RPC to assist via send operator ' ! '.
 ```sh
     assist ! RPC.
 ```
 ### Available RPCs:
-- RPC = { insertion, Counter }
+- RPC = { insert, Counter }
 ```sh
-assist ! {insertion,1000}.
-########## Insertion Simulation ##########
+assist ! {insert,1000}.
+########## Insertion ##########
 Inserted new contacts:           62
 New contacts have eliminated:    3
 New contacts are eliminated:     935
@@ -78,9 +80,9 @@ Error list:                      []
 Computation duration(milisec):   231
 ########## End Of Simulation  ##########
 ```
-- RPC = { transformation, K_index, K_rate }
+- RPC = { transform, K_index, K_rate }
 ```sh
-assist ! {transformation, 2, 1.5}.
+assist ! {transform, 2, 1.5}.
 ########## Transformation ##########
 New K-index:                     2
 New K_rate:                      1.5
@@ -93,7 +95,7 @@ New contacts have eliminated:    5
 New contacts are eliminated:     12
 Error list:                      []
 Computation duration(milisec):   0
-########## End Of Transformation ##########
+########## End Of Simulation ##########
 ```
 - RPC = dht_report
 ```sh
@@ -140,8 +142,8 @@ Simulator version 0.1.0
 Send RPC to assist genserver
      assist ! RPC 
 Available RPCs : 
-{simulation, Counter} 
-{transformation, K_index, K_rate} 
+{insert, Counter} 
+{transform, K_index, K_rate} 
 dht_report 
 help 
 ##################################
