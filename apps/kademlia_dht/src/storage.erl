@@ -136,8 +136,8 @@ table_set_up(system)->
                 #system{key = dht,
                         val = [{k_index ,4}, {k_rate ,2}]},                     
             TX = fun() ->
-                    mnesia:write(Node),
-                    mnesia:write(DHT),
+                    ok=mnesia:write(Node),
+                    ok=mnesia:write(DHT),
                     ok
                 end,
             {atomic, ok} = mnesia:sync_transaction(TX),
@@ -154,7 +154,7 @@ table_set_up(domain)->
                                 {type, set}, {disc_copies, [node()]}]),
             Domain_main = #domain{index = [], status = bucket},
             TX = fun() ->
-                    mnesia:write(Domain_main),
+                    ok=mnesia:write(Domain_main),
                     ok
                 end,
             {atomic, ok} = mnesia:sync_transaction(TX),
