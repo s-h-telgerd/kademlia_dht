@@ -31,7 +31,7 @@ k_indexer(K_index, K_rate) ->
     ok=backup(transformation),
     io:format("Transformation backup:           ~p~n", [ok]),
     ok=tabel_rebuild(transformation),
-    io:format("Transformation tabel rebuild:    ~p~n", [ok]),
+    io:format("Transformation table rebuild:    ~p~n", [ok]),
     {ok, Result}=dht_rebuild(K_index, K_rate),
     io:format("Transformation DHT rebuild:      ~p~n", [ok]),
     ok=dht_cleanup(),

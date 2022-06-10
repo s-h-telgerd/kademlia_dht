@@ -1,5 +1,5 @@
 # Overview
-This project provides an Erlang/OTP distribution of [Kademlia][ref1] Information System. The protocol is optimised for distributed systems, which connect to a decentrlized network through Internet on top of UDP based on Kademlia DHT.
+This project provides an Erlang/OTP distribution of [Kademlia][ref1] Information System. The protocol is optimized for distributed systems, which connect to a decentralized network through Internet on top of UDP based on Kademlia DHT.
 
 # Kademlia DHT
 ### A Peer-to-peer Information System based on the XOR Metric.
@@ -12,7 +12,7 @@ Each node is identified by a number or node ID. The node ID serves not only as i
 
 # Protocol Optimisation
 ### K Index
-- To cover more nodes on a bucket with logical distance 1, k_rate, Exponential growth rate, leverages the k_index based on domain lenght.
+- To cover more nodes on a bucket with logical distance 1, k_rate, Exponential growth rate, leverages the k_index based on domain length.
 ```sh
 if domain is root=[] return k_index
 else if last member of domain is 0 return k_index
@@ -25,9 +25,9 @@ else last member of domain is 1
 - To provide stable services for specific contacts
 ```sh
 Available flags:
-    1. [ trust ] , flag of trusted conracts
-    2. [ necessary ] , flag of necessary conracts
-- Flag list [ ] represents normal conracts
+    1. [ trust ] , flag of trusted contacts
+    2. [ necessary ] , flag of necessary contacts
+- Flag list [ ] represents normal contacts
 ```
 
 # Build
@@ -63,7 +63,7 @@ Available flags:
 # Simulation
 It is a DHT laboratory to simulate functionality and scalability of Kademlia DHT.
 - Insertion simulation creates new fake contacts and try to insert them into DHT.
-- Transformation simulation rebilds the DHT structure by changing the k_index and k_rate.
+- Transformation simulation rebuilds the DHT structure by changing the k_index and k_rate.
 Send your RPC to assist via send operator ' ! '.
 ```sh
     assist ! RPC.
@@ -87,7 +87,7 @@ assist ! {transform, 2, 1.5}.
 New K-index:                     2
 New K_rate:                      1.5
 Transformation backup:           ok
-Transformation tabel rebuild:    ok
+Transformation table rebuild:    ok
 Transformation DHT rebuild:      ok
 Transformation clean_up:         ok
 Inserted new contacts:           90
@@ -120,7 +120,7 @@ assist ! dht_report.
 "---" [0,0,1]    Status: bucket  Bucket_volume: 11 Depth: 3
 "--" [0,1]    Status: bucket  Bucket_volume: 23 Depth: 2
 "-" [1]    Status: bucket  Bucket_volume: 31 Depth: 1
-########## Summerize ##########
+########## Summarize ##########
  Buckets:            10
  K_index:            2.0
  Trusted contacts:   20
@@ -139,8 +139,8 @@ assist ! help.
 Kademlia
 Distributed Hash Table
 Simulator version 0.1.0
-Send RPC to assist genserver
-     assist ! RPC 
+Send RPC to assist gen_server
+     assist ! RPC .
 Available RPCs : 
 {insert, Counter} 
 {transform, K_index, K_rate} 
