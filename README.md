@@ -10,7 +10,7 @@ Each node is identified by a number or node ID. The node ID serves not only as i
 
 ![alt text][ref2]
 
-# Protocol Optimisation
+# Protocol Optimization
 ### K Index
 - To cover more nodes on a bucket with logical distance 1, k_rate, Exponential growth rate, leverages the k_index based on domain length.
 ```sh
