@@ -1,5 +1,5 @@
 # Overview
-This project provides an Erlang/OTP distribution of [Kademlia][ref1] Information System. The protocol is optimised for embedded systems, which connect to a decentrlized network through Internet on top of UDP based on Kademlia DHT.
+This project provides an Erlang/OTP distribution of [Kademlia][ref1] Information System. The protocol is optimised for distributed systems, which connect to a decentrlized network through Internet on top of UDP based on Kademlia DHT.
 
 # Kademlia DHT
 ### A Peer-to-peer Information System based on the XOR Metric.
